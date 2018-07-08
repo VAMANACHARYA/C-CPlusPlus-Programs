@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    cout << "Inserting elements at arbitrary position " << endl;
+    
+    vector<int> iVector;
+    
+    for (int i =0;i<10;i++)
+        iVector.push_back(i);
+
+/* Inserting value at the begining of the vector*/
+    iVector.insert(iVector.begin(),20);    
+    cout<<"First Element of the vector 'iVector' is: "<<iVector[0]<<endl;        
+
+/* Insert element at the second place of the vectpr*/
+  iVector.insert(iVector.begin() +2, 100);
+  if(iVector[2] == 100)
+    cout<<"Third Element of the vector 'iVector' is: "<<iVector[2]<<endl;
+/*Insrting element at the end*/    
+  iVector.insert(iVector.end(),200);
+    cout<<"Third Element of the vector 'iVector' is: "<<iVector[12]<<endl;
+
+  int iSize = iVector.size();
+  for(int i = 0; i<iSize;i++)
+      cout << "Elements of vector 'iVector' are : " << iVector[i] << endl;
+    
+    return 0;
+}
