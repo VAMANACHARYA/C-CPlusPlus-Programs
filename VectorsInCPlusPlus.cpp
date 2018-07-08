@@ -17,10 +17,10 @@ int main()
     
     vector <int> iVec;
     
-    vector <int> iVector;
+    vector <int> iVector(2);
     iVector.push_back(100);
     int SizeiVector = iVector.size();
-    cout<< "Size of 'iVector' is : "<<SizeiVector <<" First element of the vector 'iVector' is: "<< iVector[0]<<endl;
+    cout<< "Size of 'iVector' is : "<<SizeiVector <<" First element of the vector 'iVector' is: "<< iVector[2]<<endl;
     
    // int iSize = iVec.size();
     
@@ -33,6 +33,13 @@ int main()
     int iCapacity = iVec.capacity();
     cout<< "Size of the vector iVec is: "<<iSize <<endl;
     cout<< "Capacity of the vector iVec is: "<<iCapacity <<endl;
+    
+    const int SIZE = 3;
+    vector <int>iNumbers (SIZE, 2);
+    int iNumbrersSize = iNumbers.size();
+    for(int iNum = 0; iNum < iNumbrersSize; iNum++)
+        cout << "Size of the vector iVec is: "<<iNumbrersSize <<" Elemnts of vector 'iNumbers' are : " << iNumbers[iNum]<<endl;
+    
     
     vector <int> iVctr;
     for(int i=1;i<6;i++)
