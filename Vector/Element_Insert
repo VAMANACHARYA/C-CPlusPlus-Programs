@@ -23,20 +23,20 @@ int main()
 /*Inserting element at the end*/    
   iVector.insert(iVector.end(),200);
     cout<<"Last Element of the vector 'iVector' is: "<<iVector[12]<<endl;
-
+int iSize = iVector.size();
+cout << "Size of the vector 'iVector' is : " << iSize <<endl;
 cout<<endl;
 
-  int iSize = iVector.size();
+  
   for(int i = 0; i<iSize;i++)
       cout << "Elements of vector 'iVector' are : " << iVector[i] << endl;
-cout << "Size of the vector 'iVector' is : " << iSize <<endl;
+
 
 cout<<endl;
 
 iVector.pop_back(); /*Removes last element of the vector i.e., 200*/
 
-iSize = iVector.size();
-cout << "Size of the vector 'iVector' is : " << iSize <<endl;
+cout << "Size of the vector 'iVector' is : " << int (iVector.size()) <<endl;
 
 /* Erase 3rd element of the vector */
 cout<<"3rd element of the vector is : " << iVector[2] <<endl;
@@ -52,6 +52,8 @@ iVector.erase(iVector.begin(), iVector.begin()+2);
  iSize = iVector.size();
   for(int i = 0; i<iSize;i++)
       cout << "Elements of vector 'iVector' are : " << iVector[i] << endl;
+
+cout << "Size of the vector 'iVector' is : " << int (iVector.size()) <<endl;
 
     return 0;
 }
