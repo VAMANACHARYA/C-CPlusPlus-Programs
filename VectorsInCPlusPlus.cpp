@@ -12,9 +12,15 @@ using namespace std;
 
 int main()
 {
-    cout<<"Hello Welcome to Vectors in C++"<<endl;
+    cout<<"Hello Welcome to Vector in C++"<<endl;
+    
     
     vector <int> iVec;
+    
+    vector <int> iVector;
+    iVector.push_back(100);
+    int SizeiVector = iVector.size();
+    cout<< "Size of 'iVector' is : "<<SizeiVector <<" First element of the vector 'iVector' is: "<< iVector[0]<<endl;
     
    // int iSize = iVec.size();
     
@@ -54,4 +60,3 @@ int main()
     }
     return 0;
 }
-
