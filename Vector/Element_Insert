@@ -27,6 +27,11 @@ int main()
   int iSize = iVector.size();
   for(int i = 0; i<iSize;i++)
       cout << "Elements of vector 'iVector' are : " << iVector[i] << endl;
-    
+cout << "Size of the vector 'iVector' is : " << iSize <<endl;
+
+iVector.pop_back();
+iSize = iVector.size();
+cout << "Size of the vector 'iVector' is : " << iSize <<endl;
+
     return 0;
 }
