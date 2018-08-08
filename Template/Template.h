@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
 template <class T>
@@ -6,6 +7,7 @@ T GetMax(T a, T b)
 {
 	T result;
 	result = (a > b) ? a : b;
+
 	return (result);
 }
 
@@ -20,4 +22,5 @@ S Swap(S a, S b)
 	cout << "Value of b after swap is: " << b<< endl;
 
 	return 0;
+
 }
