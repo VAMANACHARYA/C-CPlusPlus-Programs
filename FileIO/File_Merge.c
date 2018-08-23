@@ -18,7 +18,8 @@ main()
 	
 	pFileA = fopen(cFileAName,"r");
 	pFileB = fopen(cFileBName,"r");
-	if(pFileA == NULL || pFileB == NULL)
+		
+	if(pFileB == NULL || pFileA == NULL)
 	{
 		printf("Error Occured..... Press any key to exit...... \n");
 		exit(EXIT_FAILURE);
@@ -32,7 +33,8 @@ main()
 	}
 	
 	while((ch = fgetc(pFileA)) != EOF)
-		fputc(ch,pMergedFile);
+		fputc(ch,pMergedFile);	
+		fprintf(pMergedFile, "Helo!\n");
 	while((ch = fgetc(pFileB)) != EOF)
 		fputc(ch,pMergedFile);
 		
