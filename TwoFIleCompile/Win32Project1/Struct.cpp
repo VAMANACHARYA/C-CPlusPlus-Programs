@@ -33,6 +33,8 @@ void printEmployeeDetails(struct Employee Details);
 //Pointer to structure
 void PointerToStruct(struct Employee *pDetail);
 
+typedef int Vam;
+
 int main()
 {
 	Books Book1, Book2;
@@ -60,6 +62,8 @@ int main()
 	strcpy_s(pDetail.EmployeeName, "PointerName");
 	PointerToStruct(&pDetail);
 
+	Vam iVariable = 100;
+	cout << "iVariable is: " << iVariable << endl;
 	_getch();
 }
 
