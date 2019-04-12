@@ -11,7 +11,7 @@ void main()
 	cin >> iRowB;
 	cout << "Enter column for ArrB" << endl;
 	cin >> iColB;
-	vector <vector <int>> iResult, iArr1, iArr2;
+	vector <vector <int>> iResult, iArr1, iArr2,iIdntMatrx;
 	if (iRowA == iRowB && iColA == iColB)
 	{
 		MatrixOperations MatrixA(iRowA, iColA, iRowB, iColB);
@@ -28,6 +28,10 @@ void main()
 		iResult = Result.MatrixAddition(iRowA, iArr1, iArr2);
 		cout << "Sum of Matrices is:" << endl;
 		Result.showResults(iRowA, iResult);
+		MatrixOperations IdntyMatrix;
+		iIdntMatrx = IdntyMatrix.CreateIdentityMatrix(iRowA, iColA);
+		cout << "Identity matrix is:" << endl;
+		IdntyMatrix.showResults(iRowA, iIdntMatrx);
 	}
 	else
 		cout << "Row column mismatch. Exit and reenter" << endl;

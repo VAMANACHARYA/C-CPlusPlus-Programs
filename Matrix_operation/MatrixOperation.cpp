@@ -43,3 +43,21 @@ void MatrixOperations :: showResults(int iRow1, const vector <vector<int>> iSum)
 		cout << endl;
 	}
 }
+
+vector <vector<int>> MatrixOperations::CreateIdentityMatrix(int iRow1, int iColumn1)
+{
+	vector <vector <int>> iIdentityMat;
+	for (int i = 0;i < iRow1;i++)
+	{
+		vector <int > iIdentityMatTemp;
+		for (int j = 0;j < iRow1;j++)
+		{
+			if (i == j)
+				iIdentityMatTemp.push_back(1);
+			else
+				iIdentityMatTemp.push_back(0);
+		}
+		iIdentityMat.push_back(iIdentityMatTemp);
+	}
+	return iIdentityMat;
+}
