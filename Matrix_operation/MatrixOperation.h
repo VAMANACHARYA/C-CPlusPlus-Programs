@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <conio.h>
+#include <string>
 using namespace std;
 
 class MatrixOperations
