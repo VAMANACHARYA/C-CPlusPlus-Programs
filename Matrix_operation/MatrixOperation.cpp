@@ -1,6 +1,6 @@
 #include "MatrixOperation.h"
 
-vector <vector<int>> MatrixOperations:: MatrixAddition(int iRow1, vector <vector <int>> iArr1, vector <vector <int>> iArr2)
+vector <vector<int>> MatrixOperations:: MatrixAddition(const int iRow1,const vector <vector <int>> iArr1, const vector <vector <int>> iArr2)
 {
 	for (int i = 0; i < iRow1; i++)
 	{
@@ -14,7 +14,7 @@ vector <vector<int>> MatrixOperations:: MatrixAddition(int iRow1, vector <vector
 	return iSum;
 }
 
-vector <vector<int>> MatrixOperations:: FillVector(int iRow1)
+vector <vector<int>> MatrixOperations:: FillVector(const int iRow1)
 {
 	vector <vector <int>>iArr;
 	for (int i = 0; i < iRow1; i++)
@@ -32,7 +32,7 @@ vector <vector<int>> MatrixOperations:: FillVector(int iRow1)
 }
 
 
-void MatrixOperations :: showResults(int iRow1, vector <vector<int>> iSum)
+void MatrixOperations :: showResults(int iRow1, const vector <vector<int>> iSum)
 {
 	for (int i = 0; i < iRow1; i++)
 	{

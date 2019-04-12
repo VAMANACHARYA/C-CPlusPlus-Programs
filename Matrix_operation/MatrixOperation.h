@@ -22,7 +22,7 @@ public:
 		this->iRow2 = iRowB;
 		this->iColumn2 = iColumnB;
 	}
-	vector <vector<int>> MatrixAddition(int iRowA, vector <vector <int>> iArrA, vector <vector <int>> iArrB);
-	vector <vector<int>> FillVector(int iRowA);
-	void showResults(int iRowA, vector <vector<int>> iSum);
+	vector <vector<int>> MatrixAddition(const int iRowA, const vector <vector <int>> iArrA, const vector <vector <int>> iArrB);
+	vector <vector<int>> FillVector(const int iRowA);
+	void showResults(int iRowA, const vector <vector<int>> iSum);
 };
