@@ -22,8 +22,8 @@ public:
 		this->iRow2 = iRowB;
 		this->iColumn2 = iColumnB;
 	}
-	vector <vector<int>> MatrixAddition(const int iRowA, const vector <vector <int>> iArrA, const vector <vector <int>> iArrB);
-	vector <vector<int>> FillVector(const int iRowA);
-	void showResults(int iRowA, const vector <vector<int>> iSum);
+	vector <vector<int>> MatrixAddition(const int iRowA, const int iColumn1, const vector <vector <int>> iArrA, const vector <vector <int>> iArrB);
+	vector <vector<int>> FillVector(const int iRowA, const int iColumn1);
+	void showResults(int iRowA, int iColumn1, const vector <vector<int>> iSum);
 	vector <vector<int>> CreateIdentityMatrix(int iRow1,int iColumn1);
 };

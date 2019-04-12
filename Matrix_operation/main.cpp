@@ -16,22 +16,25 @@ void main()
 	{
 		MatrixOperations MatrixA(iRowA, iColA, iRowB, iColB);
 		cout << "Enter Elements of iArr1" << endl;
-		iArr1 = MatrixA.FillVector(iRowA);
+		iArr1 = MatrixA.FillVector(iRowA, iColA);
 		cout << "Elements of iArr1" << endl;
-		MatrixA.showResults(iRowA, iArr1);
+		MatrixA.showResults(iRowA,iColA, iArr1);
 		MatrixOperations MatrixB(iRowA, iColA, iRowB, iColB);
 		cout << "Enter Elements of iArr1" << endl;
-		iArr2 = MatrixB.FillVector(iRowA);
+		iArr2 = MatrixB.FillVector(iRowB, iColB);
 		cout << "Elements of iArr2" << endl;
-		MatrixB.showResults(iRowA, iArr2);
+		MatrixB.showResults(iRowB, iColB, iArr2);
 		MatrixOperations Result;
-		iResult = Result.MatrixAddition(iRowA, iArr1, iArr2);
+		iResult = Result.MatrixAddition(iRowA, iColA, iArr1, iArr2);
 		cout << "Sum of Matrices is:" << endl;
-		Result.showResults(iRowA, iResult);
-		MatrixOperations iIdntyMatrix;
-		IdentMat = iIdntyMatrix.CreateIdentityMatrix(iRowA,iColA);
-		cout << "Identity Matrices is:" << endl;
-		iIdntyMatrix.showResults(iRowA, IdentMat);
+		Result.showResults(iRowA, iColA, iResult);
+		if (iRowA == iColA && iRowB == iColB) 
+		{
+			MatrixOperations iIdntyMatrix;
+			IdentMat = iIdntyMatrix.CreateIdentityMatrix(iRowA, iColA);
+			cout << "Identity Matrices is:" << endl;
+			iIdntyMatrix.showResults(iRowA, iColA, IdentMat);
+		}
 	}
 	else
 		cout << "Row column mismatch. Exit and reenter" << endl;
