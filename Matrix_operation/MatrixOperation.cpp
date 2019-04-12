@@ -1,11 +1,11 @@
 #include "MatrixOperation.h"
 
-vector <vector<int>> MatrixOperations:: MatrixAddition(const int iRow1, const int iColumn1, const vector <vector <int>> iArr1, const vector <vector <int>> iArr2)
+vector <vector<int>> MatrixOperations:: MatrixAddition(const int iRowA, const int iColumnA, const vector <vector <int>> iArr1, const vector <vector <int>> iArr2)
 {
-	for (int i = 0; i < iRow1; i++)
+	for (int i = 0; i < iRowA; i++)
 	{
 		vector <int> iSumTemp;
-		for (int j = 0; j < iColumn1; j++)
+		for (int j = 0; j < iColumnA; j++)
 		{
 			iSumTemp.push_back(iArr1[i][j] + iArr2[i][j]);
 		}
@@ -14,13 +14,13 @@ vector <vector<int>> MatrixOperations:: MatrixAddition(const int iRow1, const in
 	return iSum;
 }
 
-vector <vector<int>> MatrixOperations:: FillVector(const int iRow1, const int iColumn1)
+vector <vector<int>> MatrixOperations:: FillVector(const int iRowA, const int iColumnA)
 {
 	vector <vector <int>>iArr;
-	for (int i = 0; i < iRow1; i++)
+	for (int i = 0; i < iRowA; i++)
 	{
 		vector <int> iTempVec;
-		for (int j = 0; j < iColumn1; j++)
+		for (int j = 0; j < iColumnA; j++)
 		{
 			int iNum;
 			cin >> iNum;
@@ -32,11 +32,11 @@ vector <vector<int>> MatrixOperations:: FillVector(const int iRow1, const int iC
 }
 
 
-void MatrixOperations :: showResults(int iRow1,int iColumn1, const vector <vector<int>> iSum)
+void MatrixOperations :: showResults(int iRowA,int iColumnA, const vector <vector<int>> iSum)
 {
-	for (int i = 0; i < iRow1; i++)
+	for (int i = 0; i < iRowA; i++)
 	{
-		for (int j = 0; j < iColumn1; j++)
+		for (int j = 0; j < iColumnA; j++)
 		{
 			cout << iSum[i][j] << " ";
 		}
@@ -44,13 +44,13 @@ void MatrixOperations :: showResults(int iRow1,int iColumn1, const vector <vecto
 	}
 }
 
-vector <vector<int>> MatrixOperations::CreateIdentityMatrix(int iRow1, int iColumn1)
+vector <vector<int>> MatrixOperations::CreateIdentityMatrix(int iRowA, int iColumnA)
 {
 	vector <vector <int>> iIdentityMat;
-	for (int i = 0;i < iRow1;i++)
+	for (int i = 0;i < iRowA;i++)
 	{
 		vector <int > iIdentityMatTemp;
-		for (int j = 0;j < iRow1;j++)
+		for (int j = 0;j < iRowA;j++)
 		{
 			if (i == j)
 				iIdentityMatTemp.push_back(1);
@@ -60,4 +60,25 @@ vector <vector<int>> MatrixOperations::CreateIdentityMatrix(int iRow1, int iColu
 		iIdentityMat.push_back(iIdentityMatTemp);
 	}
 	return iIdentityMat;
+}
+
+vector <vector<int>> MatrixOperations::MatrixMultiplication(const int iRowA, const int iColumnB, const int iColumnA, const vector <vector <int>> iArr1, const vector <vector <int>> iArr2)
+{
+	vector<int> iTempSum;
+	vector< vector<int>> iResult;
+	int Product;
+	for (int i = 0; i < iRowA;i++)
+	{
+		for (int j = 0; j < iColumnB;j++)
+		{
+			Product = 0;
+			for (int k = 0; k < iColumnA;k++)
+			{
+				Product += iArr1[i][k] * iArr2[k][j];
+			}
+			iTempSum.push_back(Product);
+		}
+	}
+	iResult.push_back(iTempSum);
+	return iResult;
 }
