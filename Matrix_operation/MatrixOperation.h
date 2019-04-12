@@ -10,9 +10,11 @@ private:
 	vector <vector <int>> iArr1, iArr2, iSum;
 	int iRow1, iColumn1, iRow2, iColumn2;
 public:
+	//Default Constructor
 	MatrixOperations()
 	{
 	}
+	//Constructor rewritten
 	MatrixOperations(int iRow1, int iColumn1, int iRow2, int iColumn2)
 	{
 		this->iRow1 = iRow1;
