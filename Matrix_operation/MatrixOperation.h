@@ -15,14 +15,14 @@ public:
 	{
 	}
 	//Constructor rewritten
-	MatrixOperations(int iRow1, int iColumn1, int iRow2, int iColumn2)
+	MatrixOperations(int iRowA, int iColumnA, int iRowB, int iColumnB)
 	{
-		this->iRow1 = iRow1;
-		this->iColumn1 = iColumn1;
-		this->iRow2 = iRow2;
-		this->iColumn2 = iColumn2;
+		this->iRow1 = iRowA;
+		this->iColumn1 = iColumnA;
+		this->iRow2 = iRowB;
+		this->iColumn2 = iColumnB;
 	}
-	vector <vector<int>> MatrixAddition(int iRow1, vector <vector <int>> iArr1, vector <vector <int>> iArr2);
-	vector <vector<int>> FillVector(int iRow1);
-	void showResults(int iRow1, vector <vector<int>> iSum);
+	vector <vector<int>> MatrixAddition(int iRowA, vector <vector <int>> iArrA, vector <vector <int>> iArrB);
+	vector <vector<int>> FillVector(int iRowA);
+	void showResults(int iRowA, vector <vector<int>> iSum);
 };

@@ -28,14 +28,6 @@ vector <vector<int>> MatrixOperations:: FillVector(int iRow1)
 		}
 		iArr.push_back(iTempVec);
 	}
-	for (int i = 0; i < iArr.size(); i++)
-	{
-		for (int j = 0; j < iArr[i].size(); j++)
-		{
-			cout << iArr[i][j] << " ";
-		}
-		cout << endl;
-	}
 	return iArr;
 }
 
