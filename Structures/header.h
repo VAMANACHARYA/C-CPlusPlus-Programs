@@ -16,6 +16,5 @@ struct struct_type_name
 * Unless you define a variable of the structure memory is not allocated
 * struct_variables are similar to instances of a class
 * Either struct_type_name or struct_variables can be omitted but not both
-* If a structure has only one variable then struct_type_name is not 
-necessary
+* If a structure has only one variable then struct_type_name is not necessary
  */
