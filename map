@@ -1,0 +1,33 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+#include <list>
+#include <map>
+
+using namespace std;
+void main()
+{
+
+	cout << "Enter number of servers" << endl;
+	int iNumbers;
+	cin >> iNumbers;
+	map <int, string> mMaps;
+	for (int i = 0; i < iNumbers; i++)
+	{
+		int iId;
+		string sName;
+		cin >> iId;
+		cin >> sName;
+		mMaps.insert(pair<int, string>(iId, sName));
+	}
+	map <int, string>::iterator it;
+	string sNameSearch;
+	cin >> sNameSearch;
+	for (it = mMaps.begin(); it != mMaps.end(); it++)
+	{
+		if (sNameSearch == it->second)
+			cout << it->first;
+	}
+	_getch();
+	return;
+}
